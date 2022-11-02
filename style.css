@@ -1,0 +1,11 @@
+body {
+    background-color: black;
+}
+
+.board {
+    width: 960px;
+    height: 960px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
