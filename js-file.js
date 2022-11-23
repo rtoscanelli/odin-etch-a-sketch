@@ -8,7 +8,8 @@ for (let i = 0; i < 16**2; i++) {
         pixel.style.boxSizing = 'border-box'; //make widht and height with border
         pixel.style.width = '60px';
         pixel.style.height = '60px';
-        pixel.style.border = 'solid red 1px';
+        pixel.style.border = 'solid #F0C9C2 1px';
+        pixel.style.borderRadius = '10px';
         board.appendChild(pixel);
         pixels.push(pixel);
 }
@@ -26,7 +27,8 @@ function createBoard() {
                 const pixel = document.createElement('div');
                 pixel.style.boxSizing = 'border-box'; //make widht and height with border
                 pixel.style.width = pixel.style.height = `${boardDim / gridSize}px`;
-                pixel.style.border = 'solid red 1px';
+                pixel.style.border = 'solid #F0C9C2 1px';
+                pixel.style.borderRadius = '10px';
                 pixels.push(pixel);
         }
         board.replaceChildren(...pixels);
@@ -46,10 +48,5 @@ function readGridSize() {
 
 function changeColor() {
         let color = this.style.backgroundColor;
-        if (color == 'blue') {
-                this.style.backgroundColor = 'white';
-        }
-        else {
-                this.style.backgroundColor = 'blue'
-        }
+        this.style.backgroundColor = '#FAD8D1';
 }
