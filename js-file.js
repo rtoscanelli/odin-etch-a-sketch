@@ -1,6 +1,8 @@
 const defaultSize = 16;
+let currentSize = defaultSize;
 const board = document.querySelector('.board');
 const modifyGridButton = document.querySelector('.modify-grid');
+const resetButton = document.querySelector('.reset-grid');
 
 let pixels = [];
 pixels.forEach(pixel => {pixel.addEventListener('mouseover', changeColor)});
@@ -8,6 +10,7 @@ pixels.forEach(pixel => {pixel.addEventListener('mouseover', changeColor)});
 createBoard(defaultSize);
 
 modifyGridButton.addEventListener('click', () => createBoard(readGridSize()));
+resetButton.addEventListener('click', () => createBoard(currentSize));
 
 function createBoard(gridSize) {
         pixels = [];
@@ -33,6 +36,8 @@ function readGridSize() {
                 gridSize = parseInt(prompt('Chose a grid size between 2 and 100'));
         } while(!Number.isInteger(gridSize) || gridSize > 100 || gridSize < 2);
         
+        currentSize = gridSize ;
+
         return gridSize;
 }
 
