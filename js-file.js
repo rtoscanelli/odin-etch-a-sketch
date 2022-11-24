@@ -1,26 +1,16 @@
+const defaultSize = 16;
 const board = document.querySelector('.board');
 const modifyGridButton = document.querySelector('.modify-grid');
 
 let pixels = [];
-
-for (let i = 0; i < 16**2; i++) {
-        const pixel = document.createElement('div');
-        pixel.style.boxSizing = 'border-box'; //make widht and height with border
-        pixel.style.width = '60px';
-        pixel.style.height = '60px';
-        pixel.style.border = 'solid #F0C9C2 1px';
-        pixel.style.borderRadius = '10px';
-        board.appendChild(pixel);
-        pixels.push(pixel);
-}
-
 pixels.forEach(pixel => {pixel.addEventListener('mouseover', changeColor)});
 
-modifyGridButton.addEventListener('click', createBoard);
+createBoard(defaultSize);
 
-function createBoard() {
+modifyGridButton.addEventListener('click', () => createBoard(readGridSize()));
+
+function createBoard(gridSize) {
         pixels = [];
-        let gridSize = readGridSize();
         let boardDim = parseInt(getComputedStyle(board).width);
         
         for (let i = 0; i < gridSize**2; i++) {
