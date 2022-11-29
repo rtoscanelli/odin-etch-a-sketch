@@ -1,9 +1,9 @@
 const defaultSize = 9;
 let currentSize = defaultSize;
-const redTheme = {background: '#FF8376', button: '#FF5E5E', color: '#FAD8D1'};
-const yellowTheme = {background: '#FFE872', button: '#FFCF78', color: '#FCF7C4'};
-const greenTheme = {background: '#A5EB93', button: '#7BD485', color: '#E6FFD4'};
-const blueTheme = {background: '#5B9EFF', button: '#4861E8', color: '#DAE8FA'};
+const redTheme = {background: '#ff4b66', button: '#B32238', color: '#FAD8D1'};
+const yellowTheme = {background: '#ffc564', button: '#FFCF78', color: '#FCF7C4'};
+const greenTheme = {background: '#84df9b', button: '#7BD485', color: '#E6FFD4'};
+const blueTheme = {background: '#58e9fe', button: '#4861E8', color: '#DAE8FA'};
 let paintColor = redTheme['color'];
 
 const body = document.querySelector('body');

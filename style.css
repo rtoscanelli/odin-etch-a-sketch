@@ -1,17 +1,18 @@
 :root {
-    --red-background: #FF8376;
-    --red-button: #FF5E5E;
-    --yellow-background: #FFED85;
+    --red-background: #ff4b66;
+    --red-button: #B32238;
+    --yellow-background: #ffc564;
     --yellow-button: #FFCF78;
-    --green-background: #A5EB93;
+    --green-background: #84df9b;
     --green-button: #7BD485;
-    --blue-background: #5B9EFF;
+    --blue-background: #58e9fe;
     --blue-button: #4861E8;
 }
 
 body {
     margin: 0px;
     padding: 0px;
+    min-height: 100vh;
     background-color: var(--red-background);
     display: flex;
     flex-direction: column;
@@ -96,4 +97,16 @@ button {
 .themes > button:hover { 
     background-color: rgb(226, 226, 226) !important;
 }
+
 button:active { background-color: rgb(177, 255, 156) !important;}
+
+.footer {
+    margin-top: auto;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+}
